@@ -71,7 +71,7 @@ class Scanner
                 if ($statusCode >= 400) {
                     throw new Exception("Error Processing Request", 1);
                 }
-                array_push($validUrls, ['url' => $url, 'status' => $statusCode]);
+                array_push($validUrls, $url);
             } catch (\Exception $e) {
                 // do nothings
             }
@@ -93,11 +93,11 @@ class Scanner
                 if ($statusCode >= 400) {
                     throw new Exception("Error Processing Request", 1);
                 }
-                return array_push($ValidUrl, ['url' => $url, 'status' => $statusCode]);
+                return $ValidUrl;
             } catch (\Exception $e) {
                 // do nothings
             }
         }
-        return $ValidUrl;
+        return false;
     }
 }
