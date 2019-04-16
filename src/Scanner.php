@@ -86,18 +86,38 @@ class Scanner
      */
     public function getOneValidUrls()
     {
-        $ValidUrl = [];
         foreach ($this->urls as $url) {
             try {
                 $statusCode = $this->getStatusCodeForUrl($url);
                 if ($statusCode >= 400) {
                     throw new Exception("Error Processing Request", 1);
                 }
-                return $ValidUrl;
+                return $url;
             } catch (\Exception $e) {
                 // do nothings
             }
         }
         return false;
+    }
+
+    /**
+     * 验证链接有效性
+     *
+     * @return Boolean
+     */
+    public function verifyUrl()
+    {
+        $ret = false;
+        foreach ($this->urls as $url) {
+            try {
+                $statusCode = $this->getStatusCodeForUrl($url);
+                if ($statusCode >= 400) {
+                    throw new Exception("Error Processing Request", 1);
+                }
+                return true;
+            } catch (\Exception $e) {
+                return false;
+            }
+        }
     }
 }
