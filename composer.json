@@ -27,8 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JackyBan\\UrlScanner\\": "src/",
-            "JackyBan\\Pinyin\\": "src/"
+            "JackyBan\\": "src/"
         }
     }
 }
