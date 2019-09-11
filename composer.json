@@ -1,7 +1,7 @@
 {
     "name": "jackyban/urlscanner",
     "description": "Scan URLs FROM A CSV FILE AND REPORT INACCESSIBLE URLs",
-    "keywords": ["url", "scanner", "csv"],
+    "keywords": ["url", "scanner", "csv", "pinyin"],
     "homepage": "https://github.com/jackyban/urlscanner",
     "license": "MIT",
     "version": "1.0.1",
@@ -14,7 +14,7 @@
     "support": {
         "issues": "https://github.com/jackyban/urlscanner/issues"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.2",
         "guzzlehttp/guzzle": "~6.0@stable"
@@ -27,7 +27,8 @@
     },
     "autoload": {
         "psr-4": {
-            "JackyBan\\UrlScanner\\": "src/"
+            "JackyBan\\UrlScanner\\": "src/",
+            "JackyBan\\Pinyin\\": "src/"
         }
     }
 }
