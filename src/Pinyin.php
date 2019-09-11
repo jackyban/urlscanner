@@ -1,5 +1,5 @@
 <?php
-namespace JackyBan\Pinyin;
+namespace JackyBan;
 
 /**
  * 汉字转拼音

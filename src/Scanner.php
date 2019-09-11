@@ -1,5 +1,5 @@
 <?php
-namespace JackyBan\UrlScanner\Url;
+namespace JackyBan;
 
 use GuzzleHttp\Client;
 
@@ -8,7 +8,7 @@ use GuzzleHttp\Client;
  * @author jakcy
  * @since  2019-04-13
  */
-class Scanner
+class UrlScanner
 {
     protected $urls;
 
